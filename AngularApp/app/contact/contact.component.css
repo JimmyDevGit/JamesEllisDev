@@ -1,0 +1,51 @@
+.errorText{
+    color: hsl(348, 100%, 61%);
+}
+
+.contactHeader {
+    color: #d4f0fc;
+    text-align: center;
+}
+
+.contactSubheader {
+    color: #d4f0fc;
+    text-align: center;
+}
+
+.iconFA {
+    font-size: 4em;
+    color: #02a9f7;
+}
+.iconFA:hover {
+    color: #02577a;
+}
+
+.iconDiv {
+    text-align: center;
+}
+.is-blue {
+    background-color: #02a9f7;
+    border-color: transparent;
+    color: #d4f0fc;
+}
+
+.input {
+    background-color : #303234; 
+    border-color: transparent;
+    color: #d4f0fc;
+}
+.input::placeholder {
+    color: #d4f0fc;
+}
+.textarea {
+    background-color : #303234; 
+    border-color: transparent;
+    color: #d4f0fc;
+}
+.textarea::placeholder {
+    color: #d4f0fc;
+}
+
+.contactFormDiv {
+  vertical-align: middle;
+}

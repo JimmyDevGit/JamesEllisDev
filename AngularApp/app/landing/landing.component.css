@@ -1,0 +1,153 @@
+.mainColumn {
+       margin-top: 7em;
+}
+
+.profilePicDiv {
+    text-align: center;
+}
+
+.profilePic {
+    max-width: 400px;
+    z-index: 3;
+    position: relative;
+    
+}
+#codeBlock1 {
+  position: relative;
+  z-index: 1;
+}
+
+.landingTextName {
+  font-size: 4em;
+  position: relative;
+  color: #d4f0fc;
+}
+.rightDiv {
+  padding-right: 0;
+}
+  .CodeBlockImgAnim {
+    max-width: 400px;
+    animation: scroll 1s linear infinite;
+  }
+  @keyframes scroll {
+      0% { transform:translateY(-101%); }
+      100% { transform:translateY(-122%); }
+  }
+  
+
+
+  .landingTextOccupation {
+    font-size: 2em;
+    position: relative;
+    color: #d4f0fc;
+  }
+
+  .textColumn {
+    text-align: center;
+    height: 32em;
+    margin-top: 11%;
+    
+  }
+
+  .landingTextOccupationLeft {
+    text-align: right;
+    margin-right: -8px;
+  }
+
+  .landingTextOccupationRight {
+    text-align: left;
+    margin-left: -8px;
+  }
+
+  .occupationColumn {
+    margin-top: 1%;
+  }
+  #leftUl {
+    height: 1em;
+    font-size: 2em;
+    overflow: hidden;
+    line-height: 1;
+    margin-right: -2%;
+  }
+  #leftUl li {
+    
+    margin-top: -1.5%;
+    margin-bottom: 1.5%;
+    display: block;
+    text-align: right;
+    animation: infinite revealUp 6s cubic-bezier(0.77, 0, 0.175, 0) 0s;
+  }
+  
+  @keyframes revealUp {
+    0% {
+      transform: translate(0,0%);
+    }
+    25% {
+      transform: translate(0,-100%);
+    }
+    50% {
+      transform: translate(0,-100%);
+    }
+    75% {
+      transform: translate(0,-200%);
+    }
+    100% {
+      transform: translate(0,-200%);
+    }
+  }
+  #rightUl {
+    height: 1em;
+    font-size: 2em;
+    overflow: hidden;
+    line-height: 1;
+    margin-left: -2%;
+    
+  }
+  #rightUl li {
+    
+    margin-top: -5px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    color: #02a9f7;
+    animation: infinite revealDown 6s cubic-bezier(0.77, 0, 0.175, 0) 0s;
+  }
+  
+  @keyframes revealDown {
+    0% {
+      transform: translate(0,-400%);
+    }
+    25% {
+      transform: translate(0,-300%);
+    }
+    50% {
+      transform: translate(0,-200%);
+    }
+    75% {
+      transform: translate(0,-100%);
+    }
+    100% {
+      transform: translate(0,0%);
+    }
+  }
+  @media(max-width: 767px) {
+    .CodeBlockImgAnim {
+      max-width: 100%;
+    }
+    .profilePic {
+      max-width: 100%;
+    }
+    .landingTextName {
+      font-size: 3em;
+    }
+    .mainColumn {
+      margin-top: -4em;
+      margin-bottom: -15em;
+    }
+    .profilePicDiv {
+      margin-bottom: -15em;
+    }
+    .textColumn {
+      margin-top: 0;
+    }
+  }

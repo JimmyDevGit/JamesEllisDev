@@ -1,0 +1,51 @@
+.title{
+  color: #d4f0fc;
+}
+.subtitle {
+  color: #d4f0fc;
+}
+.linkIcon:not(:hover) {
+  color: #02a9f7;
+}
+.linkIcon:hover {
+  color: #02577a;
+}
+.link {
+  margin: 15px;
+}
+hr {
+  background-color: #222222;
+}
+video {
+  border-radius: 10px;
+}
+@media(max-width: 767px) {
+  .column-reverse {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}
+.revealRight{
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 2s all ease;
+    
+  }
+  .revealRight.active{
+    transform: translateX(0);
+    opacity: 1;
+    
+  }
+  .revealLeft{
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .revealLeft.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+.games {
+}

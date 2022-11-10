@@ -1,0 +1,32 @@
+<div class="columns is-mobile">
+  <div class="column">
+    <div id="typingModal" class="modal">
+        <div class="modal-background" id="modalBackground" (click)="CloseModal()"></div>
+        <div class="modal-content column is-6" id="typingModalContent">
+            <div class="container" id="typingContainer">
+                <div class="columns">
+                  <div class="box column">
+                      <h1 class="title has-text-centered">Typing Challenge</h1>
+              
+                      <p class="has-text-centered">
+                        <span
+                        [class]="compare(letter, enteredText[i])"
+                        *ngFor="let letter of randomText.split(''); let i = index;"
+                        >{{  letter  }}</span
+                        >
+                      </p>
+                    <div class="field">
+                      <input class="input"(input)="onInput($event.target!)"/>
+                    </div>
+                    <div *ngIf="randomText === enteredText" class="box has-text-centered">
+                      <h1 class="title">You win!</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" (click)="CloseModal()"></button>
+    </div>
+  </div>
+</div>
+            

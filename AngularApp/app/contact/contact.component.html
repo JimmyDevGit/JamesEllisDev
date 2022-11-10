@@ -1,0 +1,84 @@
+<div class="columns is-vcentered is-desktop">
+<!-- Contact message     -->
+    <div class="column is-3 is-offset-2">
+            <p class="subtitle is-4 contactSubheader">I'm always looking for new coding adventures and my inbox is always open. <br>Let's get in touch today!</p>
+            <div class=" columns is-mobile iconDiv">
+                <div class="column is-5 is-offset-1">
+                    <a href="https://github.com/JimmyDevGit"  target="_blank">
+                        <i class='fab fa-brands fa-github iconFA'></i>
+                    </a>
+                </div>
+                <div class="column is-5">
+                    <a href="https://www.linkedin.com/in/james-ellis-314434255"  target="_blank">
+                        <i class='fab fa-brands fa-linkedin iconFA'></i>
+                    </a>
+                </div>
+            </div>
+    </div>
+
+<!-- form -->
+    <div class="column is-4 is-offset-1 contactFormDiv">
+        <form (ngSubmit)="ContactSubmit(contactForm)" #f="ngForm" [formGroup]="contactForm" >
+            <div class="field">
+                <div class="control form-group">
+                    <input
+                        [value]="name"
+                        (blur)="ValidateName()"
+                        (input)="nameValidateAttempted && ValidateName()" 
+                        class= 'form-control input {{nameClass}}'
+                        type="text"
+                        placeholder="name"
+                        formControlName="name"
+                    >
+                    <span
+                        [hidden]="!nameValidateAttempted || nameValidateAttempted && this.contactForm.get('name')?.valid"
+                        class="errorText">
+                            Please enter your name
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control form-group">
+                    <input
+                        [value]="email"
+                        (blur)="ValidateEmail()"
+                        (input)="emailValidateAttempted && ValidateEmail()"
+                        (input)=" EmailToLowerCase($event.target!)"
+                        class="form-control input {{emailClass}}"
+                        type="email"
+                        placeholder="email"
+                        formControlName="email"
+                >
+                <span
+                    [hidden]="!emailValidateAttempted || emailValidateAttempted && this.contactForm.get('email')?.valid"
+                    class="errorText">
+                        Email is invalid
+                </span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control form-group">
+                    <textarea
+                        [value]="message"
+                        (blur)="ValidateMessage()"
+                        (input)="messageValidateAttempted && ValidateMessage()"
+                        class="form-control textarea {{messageClass}}"
+                        type="message"
+                        placeholder="message"
+                        formControlName="message"
+                    ></textarea>
+                <span
+                    [hidden]="!messageValidateAttempted || messageValidateAttempted && this.contactForm.get('message')?.valid"
+                    class="errorText">
+                        Please enter a message
+                </span>
+                </div>
+            </div>
+            <div class="control">
+                <div class="buttons">
+                    <button [disabled]="submitBtnDisabled" type="submit" class="button {{submitBtnClass}} is-fullwidth">{{submitBtnTxt}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.customIconImg {
+    width: 7em;
+    height: 7em;
+    margin-bottom: -1em;
+    text-align: center;
+    opacity: 0;
+}
+
+.iconFA {
+    font-size: 7em;
+    opacity: 0;
+}
+
+.iconDiv {
+    text-align: center;
+    margin-bottom: 4em;
+    padding: 0;
+}
+
+.iconText {
+    color: #d4f0fc;
+    text-align: center;
+    overflow-wrap: normal;
+    margin-top: 1em;
+    opacity: 0;
+}
+
+.customIconText{
+    margin-top: 1.4em;
+}
+
+.bounce {
+    animation: bounce 2s ease;
+    opacity: 1;
+  }
+  @keyframes bounce {
+      0% { transform:translateY(80%); opacity: 0;}
+      15% { transform:translateY(-40%); }
+      30% { transform:translateY(0%); }
+      50% { transform:translateY(-15%); opacity: 1; }
+      65% { transform:translateY(0%); }
+  }
+
+.textAppear {
+    animation: appear 2s ease;
+    opacity: 1;
+    }
+    @keyframes appear {
+        0% { opacity: 0;}
+        100% { opacity: 1;}
+    }
